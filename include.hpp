@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <sys/stat.h>
+#include <unistd.h>
 
 # define WHITEENDL   std::endl << WHITE
 # define BLACK   "\033[30m"      /* Black */
