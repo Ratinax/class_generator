@@ -32,7 +32,7 @@ SRC 			= 	$(addprefix $(SRC_FOLDER), $(SRC_FILES))
 INCLUDES 		= 	$(addprefix $(INC_FOLDER), $(INCLUDES_FILES))
 
 OBJ 			= 	${SRC_FILES:.cpp=.o}
-CFLAGS 			= -Wall -Werror -Wextra -std=c++98#-g3 -fsanitize=address
+CFLAGS 			= -Wall -Werror -Wextra #-g3 -fsanitize=address
 OBJS			= 	$(addprefix $(OBJS_FOLDER), $(OBJ))
 
 all : $(NAME)

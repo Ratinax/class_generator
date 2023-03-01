@@ -10,7 +10,7 @@ int	accessToFolder(std::string name)
 	return (1);
 }
 
-int createFolder(std::string name)
+int	createFolder(std::string name)
 {
 	struct stat	folderExists;
 
@@ -24,9 +24,37 @@ int createFolder(std::string name)
 	return (1);
 }
 
+void	createCpp(std::string name)
+{
+	std::ofstream	myOutFile;
+
+	name += ".cpp";
+	name = "src/" + name;
+	myOutFile.open(name.c_str());
+	if (!(myOutFile.is_open()))
+	{
+		std::cout << RED << "Error" << WHITE << " : Unable to create file" << name << WHITEENDL;
+		return ;
+	}
+}
+
+void	createHpp(std::string name)
+{
+	std::ofstream	myOutFile;
+
+	name += ".hpp";
+	name = "inc/" + name;
+	myOutFile.open(name.c_str());
+	if (!(myOutFile.is_open()))
+	{
+		std::cout << RED << "Error" << WHITE << " : Unable to create file" << name << WHITEENDL;
+		return ;
+	}
+}
+
 int	main(int argc, char **argv)
 {
-	(void) argv;
+	/*Create folders nd handle errors*/
 	if (argc < 2)
 	{
 		std::cout << MAGENTA << "Warning " << WHITE << ": Should be used : ./class [name of first class] ... [name of last class]" << WHITEENDL;
@@ -36,5 +64,9 @@ int	main(int argc, char **argv)
 		return (1);
 	if (createFolder("src") == 0)
 		return (1);
-	
+	for (int i = 1; i < argc; i++)
+	{
+		createHpp(argv[i]);
+		createCpp(argv[i]);
+	}
 }
