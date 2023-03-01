@@ -1,9 +1,9 @@
 #ifndef INCLUDE_HPP
 # define INCLUDE_HPP
 
-#include <iosrtream>
-#include <direct.h>
+#include <iostream>
 #include <string>
+#include <sys/stat.h>
 
 # define WHITEENDL   std::endl << WHITE
 # define BLACK   "\033[30m"      /* Black */
