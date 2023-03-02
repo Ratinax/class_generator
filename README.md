@@ -2,7 +2,11 @@
 generate class using canonic form
 
 do Make to compile
-than do ./class with all you class Name
-That will create you class in .hpp and declare the constructors/destructors in .cpp
-and put them in src/ and inc/ folders
+than do ./class [[-rmf]||[-rm]||[-hc][-cc] [name of you classes]]
 
+-rmf : remove inc and src folders
+-rm : to remove the classes that you put in params
+-hc : colors in .hpp
+-cc : colors in .cpp
+
+if no -rmf nor -rm : create folders inc/ and src/ to put you classes in, in canonic form
