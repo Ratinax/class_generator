@@ -8,6 +8,7 @@
 # include <fstream>
 # include <cstring>
 # include <stdio.h>
+# include <filesystem>
 
 # define WHITEENDL   std::endl << WHITE
 # define BLACK   "\033[30m"

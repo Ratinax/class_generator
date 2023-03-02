@@ -175,14 +175,21 @@ int	removeFolders()
 	int	worstCase;
 
 	worstCase = 0;
-	status = remove("inc/");
-	if (status != 0)
+	status = 0;
+	if (std::filesystem::exists("inc/") == 1 && access("inc/", W_OK) == 0)
+		status = std::filesystem::remove_all("inc/");
+	else
+		status = 255;
+	if (status != 2)
 	{
 		worstCase  = status;
 		std::cout << RED << "Error" << WHITE << " : couldn't delete inc/" << WHITEENDL;
 	}
-	status = remove("src/");
-	if (status != 0)
+	if (std::filesystem::exists("src/") == 1 && access("src/", W_OK) == 0)
+		status = std::filesystem::remove_all("src/");
+	else
+		status = 255;
+	if (status != 2)
 	{
 		worstCase  = status;
 		std::cout << RED << "Error" << WHITE << " : couldn't delete src/" << WHITEENDL;
