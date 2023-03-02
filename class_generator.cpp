@@ -135,7 +135,7 @@ void	createHpp(std::string name, int is_color)
 	myOutFile << "		" << name << "(const " << name << " &" << (char)tolower(name[0]) << ");" << std::endl;
 	myOutFile << "		" << name << " &operator=(const " << name << " &" << (char)tolower(name[0]) << ");" << std::endl;
 	myOutFile << "		" << "~" << name << "(void);" << std::endl;
-	myOutFile << "}" << std::endl << std::endl;
+	myOutFile << "};" << std::endl << std::endl;
 	myOutFile << "#endif" << std::endl;
 	myOutFile.close();
 }
