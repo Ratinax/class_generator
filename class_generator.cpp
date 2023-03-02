@@ -217,7 +217,7 @@ int	main(int argc, char **argv)
 			return (remove(argc, argv));
 		if (strcmp(argv[1], "-hc") == 0 || (strcmp(argv[2], "-hc") == 0 && strcmp(argv[1], "-cc") == 0))
 			is_hcolor = 1;
-		if (strcmp(argv[1], "-cc") == 0 || (strcmp(argv[2], "-cc") == 0 && strcmp(argv[1], "-cc") == 0))
+		if (strcmp(argv[1], "-cc") == 0 || (strcmp(argv[2], "-cc") == 0 && strcmp(argv[1], "-hc") == 0))
 			is_ccolor = 1;
 	}
 	if (createFolder("inc") == 0)
