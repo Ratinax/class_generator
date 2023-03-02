@@ -17,7 +17,7 @@ void	putMessage(std::ofstream &myOutFile, std::string name, std::string message,
 		myOutFile << "BLACK << ";
 	myOutFile << "\"" << name << " " << message << "\"" << " << ";
 	if (color != "")
-		myOutFile << "WHITENDL;" << std::endl;
+		myOutFile << "WHITEENDL;" << std::endl;
 	else
 		myOutFile << "std::endl;" << std::endl;
 }
