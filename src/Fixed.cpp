@@ -10,9 +10,10 @@ Fixed::Fixed(const Fixed &f)
 	std::cout << "Fixed copy constructor called" << std::endl;
 }
 
-Fixed::Fixed &operator=(const Fixed &f)
+Fixed	&Fixed::operator=(const Fixed &f)
 {
 	std::cout << "Fixed overload equal constructor called" << std::endl;
+	return (*this);
 }
 
 Fixed::~Fixed(void)

@@ -74,12 +74,13 @@ void	createCpp(std::string name, int is_color)
 	else
 		putMessage(myOutFile, name, "copy constructor called");
 	myOutFile << "}" << std::endl << std::endl;
-	myOutFile << name << "::" << name << " &operator=(const " << name << " &" << (char)tolower(name[0]) << ")" << std::endl;
+	myOutFile << name << "	&" << name << "::operator=(const " << name << " &" << (char)tolower(name[0]) << ")" << std::endl;
 	myOutFile << "{" << std::endl;
 	if (is_color != 0)
 		putMessage(myOutFile, name, "overload equal constructor called", "BLACK");
 	else
 		putMessage(myOutFile, name, "overload equal constructor called");
+	myOutFile << "	return (*this);" << std::endl;
 	myOutFile << "}" << std::endl << std::endl;
 	myOutFile << name << "::" << "~" << name << "(void)" << std::endl;
 	myOutFile << "{" << std::endl;
