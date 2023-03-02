@@ -68,26 +68,26 @@ void	createCpp(std::string name, int is_color)
 		putMessage(myOutFile, name, "default constructor called");
 	myOutFile << "}" << std::endl << std::endl;
 	myOutFile << name << "::" << name << "(const " << name << " &" << (char)tolower(name[0]) << ")" << std::endl;
-	myOutFile << "{" << std::endl << std::endl;
+	myOutFile << "{" << std::endl;
 	if (is_color != 0)
 		putMessage(myOutFile, name, "copy constructor called", "BLACK");
 	else
 		putMessage(myOutFile, name, "copy constructor called");
 	myOutFile << "}" << std::endl << std::endl;
 	myOutFile << name << "::" << name << " &operator=(const " << name << " &" << (char)tolower(name[0]) << ")" << std::endl;
-	myOutFile << "{" << std::endl << std::endl;
+	myOutFile << "{" << std::endl;
 	if (is_color != 0)
 		putMessage(myOutFile, name, "overload equal constructor called", "BLACK");
 	else
 		putMessage(myOutFile, name, "overload equal constructor called");
 	myOutFile << "}" << std::endl << std::endl;
 	myOutFile << name << "::" << "~" << name << "(void)" << std::endl;
-	myOutFile << "{" << std::endl << std::endl;
+	myOutFile << "{" << std::endl;
 	if (is_color != 0)
 		putMessage(myOutFile, name, "destructor called", "BLACK");
 	else
 		putMessage(myOutFile, name, "destructor called");
-	myOutFile << "}" << std::endl << std::endl;
+	myOutFile << "}" << std::endl;
 	myOutFile.close();
 }
 
