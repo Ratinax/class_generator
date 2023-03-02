@@ -12,7 +12,7 @@ Fixed::Fixed(const Fixed &f)
 
 Fixed	&Fixed::operator=(const Fixed &f)
 {
-	std::cout << "Fixed overload equal constructor called" << std::endl;
+	std::cout << "Fixed copy assignment operator called" << std::endl;
 	return (*this);
 }
 
