@@ -110,13 +110,13 @@ void	createHpp(std::string name, int is_color)
 	if (is_color)
 	{
 		myOutFile << "# define WHITEENDL   std::endl << WHITE" << std::endl;
-		myOutFile << "# define BLACK			\"\\033[30m\"" << std::endl;
-		myOutFile << "# define RED			\"\\033[31m\"" << std::endl;
-		myOutFile << "# define GREEN			\"\\033[32m\"" << std::endl;
-		myOutFile << "# define YELLOW			\"\\033[33m\"" << std::endl;
-		myOutFile << "# define BLUE			\"\\033[34m\"" << std::endl;
-		myOutFile << "# define MAGENTA		\"\\033[35m\"" << std::endl;
-		myOutFile << "# define CYAN			\"\\033[36m\"" << std::endl;
+		myOutFile << "# define BLACK			\"\\033[1m\\033[30m\"" << std::endl;
+		myOutFile << "# define RED			\"\\033[1m\\033[31m\"" << std::endl;
+		myOutFile << "# define GREEN			\"\\033[1m\\033[32m\"" << std::endl;
+		myOutFile << "# define YELLOW			\"\\033[1m\\033[33m\"" << std::endl;
+		myOutFile << "# define BLUE			\"\\033[1m\\033[34m\"" << std::endl;
+		myOutFile << "# define MAGENTA		\"\\033[1m\\033[35m\"" << std::endl;
+		myOutFile << "# define CYAN			\"\\033[1m\\033[36m\"" << std::endl;
 		myOutFile << "# define WHITE			\"\\033[37m\"" << std::endl;
 		myOutFile << "# define BOLDBLACK		\"\\033[1m\\033[30m\"" << std::endl;
 		myOutFile << "# define BOLDRED		\"\\033[1m\\033[31m\"" << std::endl;
